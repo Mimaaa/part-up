@@ -6,7 +6,6 @@
 
 
 3stack:accounts-logout-hook
-accounts-facebook
 accounts-password
 aldeed:autoform-bs-datepicker
 aldeed:autoform@5.1.2
@@ -131,3 +130,4 @@ partup-client-admin-sectors
 partup-client-boardview
 standard-minifier-css
 standard-minifier-js
+accounts-facebook

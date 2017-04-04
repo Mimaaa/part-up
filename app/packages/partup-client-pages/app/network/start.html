@@ -1,65 +1,14 @@
 <template name="app_network_start">
-    <article class="pu-page pu-page-overlay {{#if data.network.archived_at}}pu-page-overlay-dark{{/if}}">
-
-        <div class="pu-composition pu-composition-tribestart {{#if data.network.archived_at}}pu-composition-tribestart-archived{{/if}}">
-            {{#unless state.loaded}}
-                {{> Spinner color='inverted' }}
-            {{else}}
-                <nav>
-                    {{# if data.network.isAdmin currentUser._id }}
-                        <a href="{{pathFor 'network-settings' slug=slug}}" data-open-networksettings
-                            class="pu-button pu-button-spinning">
-                            <i class="picon-cog"></i>
-                        </a>
-                    {{/if}}
-                    {{#unless data.network.archived_at}}
-                        <a href="{{ pathFor route='network-detail' slug=data.network.slug }}" class="pu-button"><i class="picon-times"></i></a>
-                    {{/unless}}
-                </nav>
-                <header class="pu-highlight pu-highlight-inverted">
-                    <figure class="pu-avatar pu-avatar-responsive pu-avatar-square" style="{{#with data.network.image }}background-image:url('{{ partupImageUrl id=. store='360x360'}}');{{/with }}"></figure>
-                    <h1>{{data.network.name}}</h1>
-                    <h3>
-                        {{data.network.description}}{{#unless data.network.archived_at}} <a class="pu-link pu-link-strong" href="{{pathFor route='network-about' slug=data.network.slug}}">{{_ 'pages-app-network-start-button-readmore'}}</a>{{/unless}}
-                    </h3>
-                    {{#with data.network.displayTags data.network.slug}}
-                        <ul class="pu-list pu-list-horizontal pu-list-tags">
-                            {{#each .}}
-                                <li><a href="#" class="pu-tag pu-tag-dark">{{tag}}</a></li>
-                            {{/each}}
-                        </ul>
-                    {{/with}}
-                    <!-- join or leave button -->
-                    {{#if data.network.archived_at}}
-                        <a href="#" class="pu-button pu-button-gray pu-button-disabled">{{_ 'pages-app-network-start-button-gototribe-disabled'}}</a>
-                    {{else}}
-                        {{#if data.network.hasMember currentUserId}}
-                            <a href="{{ pathFor route='network-detail' slug=data.network.slug }}" class="pu-button">{{_ 'pages-app-network-start-button-gototribe'}}</a>
-                        {{else}}
-                            {{> app_network_joinbutton network=data.network }}
-                        {{/if}}
-                    {{/if}}
-                </header>
-                {{# unless data.network.isClosedForUpper currentUserId }}
-                    <footer>
-                        <section>
-                            {{> app_network_start_partups partups=data.activePartups }}
-                            <a class="pu-button pu-button-translucent{{#if data.network.archived_at }} pu-button-disabled{{/if}}" href="{{ pathFor route='network-detail' slug=data.network.slug }}">{{_ 'pages-app-network-start-button-explore' }}</a>
-                        </section>
-                        <section>
-                            {{> app_network_start_uppers uppers=data.activeUppers }}
-                            <a class="pu-button pu-button-translucent{{#if data.network.archived_at }} pu-button-disabled{{/if}}" href="{{ pathFor route='network-chat' slug=data.network.slug }}">{{_ 'pages-app-network-start-button-activity' }}</a>
-                        </section>
-                    </footer>
-                {{/unless}}
-                {{#if data.network.archived_at}}
-                    <div class="pu-sub-archivedfooter">
-                        <i class="picon-warning"></i> {{_ 'pages-app-network-start-label-archived' }} <strong>{{ partupDateOnly data.network.archived_at }}</strong>
-                    </div>
-                {{/if}}
-            {{/unless}}
-            <div class="pu-tribebackground {{#if state.loaded}}pu-state-loaded{{/if}}" style="{{#if data.network.background_image}}{{#with data.network.background_image }}background-image:url('{{ partupImageUrl id=. store='1200x520'}}');{{/with }}{{/if}}"></div>
-        </div>
-
+    <article class="pu-page pu-tribestart">
+        {{#unless state.loaded}}
+            {{> Spinner color='inverted' }}
+        {{else}}
+            {{> Start_Header networkSlug=networkSlug }}
+            {{> Start_Nav}}
+            {{> Start_Video }}
+            {{> Start_Chat }}
+            {{> Start_About }}
+            {{> Start_MostActive}}
+        {{/unless}}
     </article>
 </template>

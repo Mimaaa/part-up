@@ -92,6 +92,13 @@ Package.onUse(function(api) {
             // App: network tabs
             'app/network/start.html',
             'app/network/start.js',
+            'app/network/start/Start_About.html',
+            'app/network/start/Start_Chat.html',
+            'app/network/start/Start_Header.html',
+            'app/network/start/Start_Header.js',
+            'app/network/start/Start_MostActive.html',
+            'app/network/start/Start_Nav.html',
+            'app/network/start/Start_Video.html',
 
             'app/network/partials/joinbutton.html',
             'app/network/partials/joinbutton.js',

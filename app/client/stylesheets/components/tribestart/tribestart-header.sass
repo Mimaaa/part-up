@@ -1,15 +1,17 @@
-.pu-composition-tribestart
+.pu-tribestart-header
     text-align: center
-    padding-top: 60px
+    position: relative
+    background-color: $color-primary
 
     header, nav, footer
         z-index: 1
 
     header
-        position: relative
         padding: 0
         margin: 0 auto
-        margin-bottom: 75px
+        padding-top: 60px
+        position: relative
+        padding-bottom: 75px
         max-width: 1175px
 
         .pu-button
@@ -84,6 +86,7 @@
             margin-right: 5px
 
     &-archived
+        background-color: #494949
         > footer section > ul .pu-avatar,
         .pu-accordion li.item .pu-avatar,
         .pu-count
@@ -98,10 +101,11 @@
                 background-color: darken(#494949, 10%)
 
     @media screen and (min-height: 1000px)
-        padding-top: 100px
 
         header
-            margin-bottom: 145px
+            padding-top: 100px
+            padding-bottom: 145px
 
     @media screen and (min-height: 1100px)
-        padding-top: 150px
+        header
+            padding-top: 150px

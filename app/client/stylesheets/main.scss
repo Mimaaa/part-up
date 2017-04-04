@@ -45,7 +45,6 @@
 @import "client/stylesheets/components/compositions/pu-composition-startpartup-contribute.sass";
 @import "client/stylesheets/components/compositions/pu-composition-startpartup-promote.sass";
 @import "client/stylesheets/components/compositions/pu-composition-startpartupintromodal.sass";
-@import "client/stylesheets/components/compositions/pu-composition-tribestart.sass";
 @import "client/stylesheets/components/cookie-law-bar.sass";
 @import "client/stylesheets/components/data-usercard.sass";
 @import "client/stylesheets/components/datepicker.sass";
@@ -247,3 +246,12 @@
 @import "client/stylesheets/components/pu-inputicon.sass";
 
 @import "client/stylesheets/components/reload-bar.sass";
+
+@import "client/stylesheets/components/tribestart/tribestart.sass";
+@import "client/stylesheets/components/tribestart/tribestart-header.sass";
+@import "client/stylesheets/components/tribestart/tribestart-video.sass";
+@import "client/stylesheets/components/tribestart/tribestart-chat.sass";
+@import "client/stylesheets/components/tribestart/tribestart-about.sass";
+@import "client/stylesheets/components/tribestart/tribestart-mostactive.sass";
+
+@import "client/stylesheets/components/tribestart/tribestart-nav.sass";

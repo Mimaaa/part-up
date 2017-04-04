@@ -1,0 +1,16 @@
+<template name="Start_Video">
+    <div id="video" class="pu-wrap">
+        <div class="pu-home-intro">
+            <div class="pu-home-wrap">
+                <div class="pu-home-block pu-home-intro__video">
+                    {{> Video url=video_url poster=video_placeholder}}
+                </div>
+                <div class="pu-home-block pu-home-textblock">
+                    <h2 class="pu-home-subtitle pu-home-textblock__title"><span>{{_ 'pages-app-home-intro-title'}}</span></h2>
+                    <p class="pu-home-textblock__paragraph">{{_ 'pages-app-home-intro-paragraph-1'}}</p>
+                    <p class="pu-home-textblock__paragraph">{{_ 'pages-app-home-intro-paragraph-2' }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

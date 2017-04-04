@@ -1,0 +1,12 @@
+{{# unless data.network.isClosedForUpper currentUserId }}
+                    <footer>
+                        <section>
+                            {{> app_network_start_partups partups=data.activePartups }}
+                            <a class="pu-button pu-button-translucent{{#if data.network.archived_at }} pu-button-disabled{{/if}}" href="{{ pathFor route='network-detail' slug=data.network.slug }}">{{_ 'pages-app-network-start-button-explore' }}</a>
+                        </section>
+                        <section>
+                            {{> app_network_start_uppers uppers=data.activeUppers }}
+                            <a class="pu-button pu-button-translucent{{#if data.network.archived_at }} pu-button-disabled{{/if}}" href="{{ pathFor route='network-chat' slug=data.network.slug }}">{{_ 'pages-app-network-start-button-activity' }}</a>
+                        </section>
+                    </footer>
+                {{/unless}}
