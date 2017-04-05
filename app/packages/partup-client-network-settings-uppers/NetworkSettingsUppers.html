@@ -5,7 +5,7 @@
 
         {{# if data.network.uppers }}
 
-        <a class="pu-button pu-button-text pu-button-no-side-padding" target="_blank" href="/csv/tribe/uppers?token={{getToken}}&id={{data.network._id}}">{{_ 'network-settings-uppers-button-csv-export' }}</a>
+        <a class="pu-button pu-button-text pu-button-no-side-padding" target="_blank" rel="noopener" href="/csv/tribe/uppers?token={{getToken}}&id={{data.network._id}}">{{_ 'network-settings-uppers-button-csv-export' }}</a>
 
         {{> SearchInput inputSettings=form.searchInput}}
 

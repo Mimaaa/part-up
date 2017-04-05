@@ -1,7 +1,7 @@
 <template name="DocumentRenderer">
     <ul class="document-icons icons-{{documents.length}}-layout">
         {{# each documents }}
-            <a href="{{previewLink .}}" target="_blank">
+            <a href="{{previewLink .}}" target="_blank" rel="noopener">
                 <li>
                     <div class="file-download">
                         <figure class="pu-download-icon" style="background-image:url('/images/add-media-icons/download.svg');"></figure>
