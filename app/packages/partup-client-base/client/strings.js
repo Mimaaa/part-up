@@ -124,7 +124,7 @@ Partup.client.strings = {
             };
 
             return (isExternal(href))
-                ? `<a href="${href}" target="_blank" rel="noopener" title="${title}">${text}</a>`
+                ? `<a href="${href}" target="_blank" rel="noopener" rel="noreferrer" title="${title}">${text}</a>`
                 : `<a href="${href}" title="${title}">${text}</a>`;
         };
 

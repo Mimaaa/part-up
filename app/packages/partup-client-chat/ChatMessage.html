@@ -19,11 +19,11 @@
                                 </p>
                                 {{#with preview_data }}
                                     {{#if partupEquals type 'image'}}
-                                        <a href="{{url}}" target="_blank" rel="noopener" class="pu-linkpreview pu-linkpreview-minimal">
+                                        <a href="{{url}}" target="_blank" rel="noopener" rel="noreferrer" class="pu-linkpreview pu-linkpreview-minimal">
                                             <img src="{{url}}" alt="">
                                         </a>
                                     {{else}}
-                                        <a href="{{url}}" target="_blank" rel="noopener" class="pu-linkpreview">
+                                        <a href="{{url}}" target="_blank" rel="noopener" rel="noreferrer" class="pu-linkpreview">
                                             {{#with image}}<figure style="background-image: url('{{ . }}');" ></figure>{{/with}}
                                             <div class="pu-linkpreview-description">
                                                 <p class="pu-sub-title">{{ title }}</p>

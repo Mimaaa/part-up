@@ -26,7 +26,7 @@ Partup.client.sanitizeOutputHTML = function(value) {
         .replace(/ ?color:[\d\D]*; ?/g, '')
         .replace(/ ?id="null" ?/g, '')
         .replace(/ ?text-align: left; ?/g, '')
-        .replace(/href=?/g, 'target="_blank" rel="noopener" href=')
+        .replace(/href=?/g, 'target="_blank" rel="noopener" rel="noreferrer" href=')
         .replace(/ style=""/g, '')
         .replace(/<>/g, '')
         .replace(/<br>/g, '')

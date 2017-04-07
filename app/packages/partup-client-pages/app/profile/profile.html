@@ -11,10 +11,10 @@
                     <div class="pu-profile__div">
                         <h3>
                             {{profile.data.name}}
-                            {{#if profile.data.facebook_url}}<a href="{{ profile.data.facebook_url }}" target="_blank" rel="noopener"><i class="picon-facebook"></i></a>{{/if}}
-                            {{#if profile.data.linkedin_url}}<a href="{{ profile.data.linkedin_url }}" target="_blank" rel="noopener"><i class="picon-linkedin"></i></a>{{/if}}
-                            {{#if profile.data.twitter_url}}<a href="{{ profile.data.twitter_url }}" target="_blank" rel="noopener"><i class="picon-twitter"></i></a>{{/if}}
-                            {{#if profile.data.instagram_url}}<a href="{{ profile.data.instagram_url }}" target="_blank" rel="noopener"><i class="picon-instagram"></i></a>{{/if}}
+                            {{#if profile.data.facebook_url}}<a href="{{ profile.data.facebook_url }}" target="_blank" rel="noopener" rel="noreferrer"><i class="picon-facebook"></i></a>{{/if}}
+                            {{#if profile.data.linkedin_url}}<a href="{{ profile.data.linkedin_url }}" target="_blank" rel="noopener" rel="noreferrer"><i class="picon-linkedin"></i></a>{{/if}}
+                            {{#if profile.data.twitter_url}}<a href="{{ profile.data.twitter_url }}" target="_blank" rel="noopener" rel="noreferrer"><i class="picon-twitter"></i></a>{{/if}}
+                            {{#if profile.data.instagram_url}}<a href="{{ profile.data.instagram_url }}" target="_blank" rel="noopener" rel="noreferrer"><i class="picon-instagram"></i></a>{{/if}}
                         </h3>
                         <p data-expander-parent>
                             {{profile.data.description}}
@@ -32,7 +32,7 @@
                                 {{/if}}
                             {{/if}}
                             {{#with profile.data.website}}
-                                <li><a class="pu-metadata" href="{{ partupHTTP . }}" target="_blank" rel="noopener">
+                                <li><a class="pu-metadata" href="{{ partupHTTP . }}" target="_blank" rel="noopener" rel="noreferrer">
                                     <i class="picon-monitor"></i>
                                     <span>{{ partupCleanUrl .}}</span>
                                 </a></li>

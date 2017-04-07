@@ -28,7 +28,7 @@
                                     {{/with}}
                                     {{#with data.introBlock.website}}
                                         <li>
-                                            <a class="pu-metadata" href="{{ partupHTTP . }}" target="_blank" rel="noopener">
+                                            <a class="pu-metadata" href="{{ partupHTTP . }}" target="_blank" rel="noopener" rel="noreferrer">
                                                 <i class="picon-monitor"></i>
                                                 <span>{{ partupCleanUrl .}}</span>
                                             </a>
@@ -61,7 +61,7 @@
                                         {{/with}}
                                         {{#with data.network.website}}
                                             <li>
-                                                <a class="pu-metadata" href="{{ partupHTTP . }}" target="_blank" rel="noopener">
+                                                <a class="pu-metadata" href="{{ partupHTTP . }}" target="_blank" rel="noopener" rel="noreferrer">
                                                     <i class="picon-monitor"></i>
                                                     <span>{{ partupCleanUrl .}}</span>
                                                 </a>
@@ -109,10 +109,10 @@
                                                 <li><a href="mailto:{{ data.email .}}">{{ data.email . }}</a></li>
                                             </ul>
                                             <ul class="pu-list pu-list-horizontal pu-sub-socials">
-                                                {{#if profile.data.facebook_url}}<li><a href="{{ profile.data.facebook_url }}" target="_blank" rel="noopener"><i class="picon-facebook"></i></a></li>{{/if}}
-                                                {{#if profile.data.linkedin_url}}<li><a href="{{ profile.data.linkedin_url }}" target="_blank" rel="noopener"><i class="picon-linkedin"></i></a></li>{{/if}}
-                                                {{#if profile.data.twitter_url}}<li><a href="{{ profile.data.twitter_url }}" target="_blank" rel="noopener"><i class="picon-twitter"></i></a></li>{{/if}}
-                                                {{#if profile.data.instagram_url}}<li><a href="{{ profile.data.instagram_url }}" target="_blank" rel="noopener"><i class="picon-instagram"></i></a></li>{{/if}}
+                                                {{#if profile.data.facebook_url}}<li><a href="{{ profile.data.facebook_url }}" target="_blank" rel="noopener" rel="noreferrer"><i class="picon-facebook"></i></a></li>{{/if}}
+                                                {{#if profile.data.linkedin_url}}<li><a href="{{ profile.data.linkedin_url }}" target="_blank" rel="noopener" rel="noreferrer"><i class="picon-linkedin"></i></a></li>{{/if}}
+                                                {{#if profile.data.twitter_url}}<li><a href="{{ profile.data.twitter_url }}" target="_blank" rel="noopener" rel="noreferrer"><i class="picon-twitter"></i></a></li>{{/if}}
+                                                {{#if profile.data.instagram_url}}<li><a href="{{ profile.data.instagram_url }}" target="_blank" rel="noopener" rel="noreferrer"><i class="picon-instagram"></i></a></li>{{/if}}
                                             </ul>
                                         </article>
                                     </li>
